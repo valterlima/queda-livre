@@ -1,0 +1,35 @@
+<html>
+<head>
+
+	<title>Primeiro Teste: Loop de Animação com Sprites</title>
+	<script src="animacao.js"></script>
+	<script src="corpo.js"></script>
+
+</head>
+
+<body>
+<canvas id="canvas_animacao" width="300" height="300" style="border: 1px solid black">
+	NAO SUPORT BLABALBBLA
+</canvas>
+
+<script>
+window.onload = function(){
+	var canvas = document.getElementById('canvas_animacao');
+	var context = canvas.getContext('2d');
+	
+	var b1 = new Corpo(context);
+	b1.x = 150;
+	b1.y = 150;
+	b1.cor = 'blue';
+	b1.raio = 20;
+
+	animacao = new Animacao(context);
+	animacao.novoSprite(b1);
+
+	animacao.ligar();
+}
+
+</script>
+
+</body>
+</html>
